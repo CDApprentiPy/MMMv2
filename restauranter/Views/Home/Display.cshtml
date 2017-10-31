@@ -1,0 +1,10 @@
+﻿@{
+    ViewData["Title"] = "Review List";
+}
+@foreach(var review in @ViewBag.reviews)
+{
+    <h3>Review for: @review.restaurant</h3>
+    <h4>@review.stars stars</h4>
+    <p>Visit Date: @review.visited.ToString("MM/dd/yyy")</p>
+    <p>@review.review - @review.reviewer posted on @review.created_at</p>
+}

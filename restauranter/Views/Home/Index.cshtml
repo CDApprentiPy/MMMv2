@@ -1,0 +1,36 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model restauranter.Models.CreateViewModel
+
+<form asp-controller="Home" asp-action="create" method="POST">
+    <label asp-for="reviewer"></label>
+    <input asp-for="reviewer">
+    <span asp-validation-for="reviewer"></span>
+    
+    <label asp-for="restaurant"></label>
+    <input asp-for="restaurant">
+    <span asp-validation-for="restaurant"></span>
+
+    
+    <label asp-for="review"></label>
+    <input asp-for="review">
+    <span asp-validation-for="review"></span>
+
+    <label asp-for="stars"></label>
+    <select asp-for="stars">
+        <option value=1>1</option>
+        <option value=2>2</option>
+        <option value=3>3</option>
+        <option value=4>4</option>
+        <option value=5>5</option>
+    </select>
+    <span asp-validation-for="stars"></span>
+
+    <label asp-for="visited"></label>
+    <input asp-for="visited">
+    <span asp-validation-for="visited"></span>
+
+    <input type="submit" value="Submit">
+</form>
